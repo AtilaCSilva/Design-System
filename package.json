@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "channgeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=@ignite-ui/* && changeset publish"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "turbo": "^1.10.13"
+  }
+}
